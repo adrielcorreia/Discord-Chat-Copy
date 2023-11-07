@@ -1,10 +1,10 @@
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
+  display: grid;
+  grid-template-columns: .08fr .27fr 1fr .27fr;
+  grid-template-rows: .07fr 1fr;
+  width: 100%;
   min-height: 100vh;
+  max-height: 100vh;
 }
 
 .description {
