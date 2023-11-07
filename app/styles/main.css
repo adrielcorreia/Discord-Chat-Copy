@@ -1,3 +1,14 @@
+:root {
+    --btn-background: #B5BAC1;
+    --chat-background-and-btn-color: #383A40;
+    --btn-hover: #DBDEE1;
+}
+
+main {
+    position: fixed;
+    min-height: 100vh;
+}
+
 .darkgray {
     background-color: #1E1F22;
 }
@@ -22,6 +33,14 @@
 
 .column {
     flex-direction: column;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
 }
 
 /* ----------------------------------- */
