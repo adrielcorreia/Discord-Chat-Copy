@@ -7,7 +7,7 @@ export default function Nav_central() {
             <div className="container header ch">
                 <a className="navbar-brand" href="#">
                     <span>
-                        <strong className="px-2">#geral</strong>
+                        <strong className="px-2"># geral</strong>
                     </span>
                 </a>
                 

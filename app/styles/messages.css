@@ -1,0 +1,17 @@
+.msg:hover {
+    background-color: #2E3035;
+}
+
+.username, .msg {
+    font-size: .9rem;
+}
+
+.username {
+    color: #F2F3F5;
+    align-self: start;
+}
+
+.msg-individual {
+    color: #D1D4D8;
+    align-self: flex-end;
+}
