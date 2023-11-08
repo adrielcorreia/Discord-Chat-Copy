@@ -1,4 +1,6 @@
+'use client'
 import '../../styles/chat.css'
+import { useState } from 'react'
 
 export default function TextArea() {
     return (

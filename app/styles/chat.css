@@ -22,8 +22,20 @@
     padding-right: .8rem;
 }
 
+form, input {
+    color: #C7CACE;
+    border: none;
+    background: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    font-size: .9rem;
+    letter-spacing: .5px;
+}
+
+/* --------------- BOTÕES --------------- */
+
 .btn {
-    padding: 7% 0;
     background: none;
     color: var(--chat-background-and-btn-color);
     border: none;
@@ -41,11 +53,6 @@
     color: var(--btn-hover);
 }
 
-.right-btns {
-    display: flex;
-    gap: .9rem;
-}
-
 .upload {
     padding: .5rem 1.2rem;
     padding-left: 0;
@@ -59,42 +66,29 @@
     width: 20px;
     height: 20px;
     text-align: center;
-    aspect-ratio: 1;
     font-size: .9rem;
     border-radius: 100%;
+    aspect-ratio: 1;
 }
 
-form, input {
-    color: #C7CACE;
-    border: none;
-    background: none;
-    outline: none;
-    width: 100%;
+.right-btns {
     height: 100%;
-    font-size: .9rem;
-    letter-spacing: .5px;
+    display: flex;
+    gap: .9rem;
 }
 
 .fa-gift, .fa-note-sticky, .fi, .fa-face-smile {
     color: var(--btn-background);
 }
 
-.fa-gif {
-    letter-spacing: -.5px;
-    font-weight: 900;
-    padding: .1rem;
-    border-radius: 3px;
-    background-color: var(--btn-background);
-    font-size: .6rem;
-}
-
-.fi {
-    font-size: 1.7rem;
-    height: 27px;
+.fi-sr-gif-square {
+    height: 54.26%;
+    font-size: 1.5rem;
 }
 
 .gif {
     padding: 0;
+    padding-right: .1rem;
 }
 
 .fa-note-sticky {
@@ -103,4 +97,59 @@ form, input {
 
 .fa-face-smile {
     font-size: 1.5rem;
+}
+
+/* --------------- HOVERS ESPECIAIS --------------- */
+
+@keyframes popup {
+    0% {
+        opacity: 0;
+        display: block;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.025)
+    }
+}
+
+@keyframes end-popup {
+    0% {
+        transform: scale(1.025); 
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1); 
+        opacity: 0;
+        display: none;
+    }
+}
+
+.gift::before {
+    padding: .5rem .8rem;
+    width: 11%;
+    height: fit-content;
+
+    position: absolute;
+    top: 81.5%;  
+    
+    border-radius: .3rem;
+    text-align: start;
+
+    color: #C7CACE;
+    background-color: black;
+
+    content: 'Reforce os parças! Dê vantagens superbacanas de bate-papo com o Nitro.';
+
+    animation-name: end-popup;
+    animation-duration: .1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+.gift:hover::before {
+    display: block;
+    animation-name: popup;
 }
