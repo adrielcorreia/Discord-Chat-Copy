@@ -1,0 +1,95 @@
+.nav-link {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.nvv {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+}
+
+.navbar-collapse .navbar-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-collapse {
+    display: inline-block;
+    width: 50%;
+}
+
+.navbar-expand-lg {
+    display: flex;
+}
+
+.guildSeparator {
+    height: 2px;
+    width: 46px;
+    border-radius: 1px;
+    background-color: #35363C;
+}
+
+.point {
+    display: inline-block;
+    position: absolute;
+    right: 99.75%;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%; /* Inicialmente, o elemento é um círculo */
+    text-decoration: none;
+    transition: height 0.3s; /* Adicionamos uma transição para a propriedade border-radius */
+}
+
+.circleIconButton {
+    color: #23A559;
+}
+
+.circleIconButton, .fa-circle-user, .fa-discord {
+    display: inline-block;
+    padding: 22px 0 0 7.5px;
+    width: 45px;
+    height: 45px;
+    background-color: #41434A;
+    border-radius: 50%; /* Inicialmente, o elemento é um círculo */
+    text-decoration: none;
+    transition: border-radius 0.3s; /* Adicionamos uma transição para a propriedade border-radius */
+}
+
+.circleIconButton {
+    display: inline-block;
+    padding: 8px 0 0 10.6px;
+    width: 45px;
+    height: 45px;
+    background-color: #41434A;
+    border-radius: 50%; /* Inicialmente, o elemento é um círculo */
+    text-decoration: none;
+    transition: border-radius 0.5s; /* Adicionamos uma transição para a propriedade border-radius */
+}
+
+.nav-link:hover .fa-discord {
+    border-radius: 12px;
+    background-color: #5865F2; /* Quando o cursor passa por cima, alteramos o border-radius para 0, tornando o elemento um quadrado */
+    color: white;
+}
+
+.nav-link:hover .point {
+    border-radius: 12px;
+    height: 20px;
+    color: white;
+}
+
+.nav-link:hover .fa-discord {
+    border-radius: 12px;
+    background-color: #5865F2; /* Quando o cursor passa por cima, alteramos o border-radius para 0, tornando o elemento um quadrado */
+    color: white;
+}
+
+.circleIconButton:hover ,.fa-circle-user:hover {
+    border-radius: 12px;
+}
+  
