@@ -2,91 +2,97 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-  }
+}
+
+.form-control {
+  padding: 0 .4rem;
+  background-color: #1E1F22;
+  border-radius: .3rem;
+}
 
 .coluna-container{
     display: inline-block;
     height: 100%;
     width: 100%;
     color:rgb(144, 144, 144);
-  }
+}
   
-  .coluna-body{
-    display:block;
-    padding: 10px;
-    height: 87%;
-    background-color: #2f3136;
-  }
+.coluna-body{
+  display:block;
+  padding: 10px;
+  height: calc(100% - 100px);
+  background-color: #2f3136;
+}
+
+.coluna-titulo {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  margin-bottom: 2px;
+  justify-content: space-between;
+  background-color: #2f3136;
+  height: 6.3%;
+}
+.coluna-titulo h1{
+  font-size: 20px;
+}
+.coluna-perfil{
+  display: flex;
+  padding: 5px 10px;
+  justify-content: space-between;
+}
+.coluna-perfil i{
+  padding: 4px;
+  display:inline-flex;
+  justify-content: space-around;
+}
+.perfil-container {
+  width: 40px;
+  display: flex;
   
-  .coluna-titulo {
-    display: flex;
-    padding: 10px 10px 0px 10px;
-    align-items: center;
-    margin-bottom: 2px;
-    justify-content: space-between;
-    background-color: #2f3136;
-    height: 6.3%;
-  }
-  .coluna-titulo h1{
-    font-size: 20px;
-  }
-  .coluna-perfil{
-    display: flex;
-    padding: 5px 10px 0px 10px;
-    justify-content: space-between;
-  }
-  .coluna-perfil i{
-    padding: 4px;
-    display:inline-flex;
-    justify-content: space-around;
-  }
-  .perfil-container {
-    width: 40px;
-    display: flex;
-    
-  }
-  .coluna-topico, 
-  .coluna-assunto,
-  .coluna-music{
-    display: flex;
-    justify-content:flex-start;
-    margin-left: 5px;
-    padding: 5px;
-  }
-  .coluna-topico, 
-  .coluna-assunto,
-  .coluna-music, 
-  i{
-    display: flex;
-    padding-right: 10px;
-  }
-  .coluna-topico h1{
-    font-size: 16px;
-  }
-  .coluna-assunto h1{
-    font-size: 16px;
-  }
-  .coluna-music h1{
-    font-size: 16px;
-  }
+}
+.coluna-topico, 
+.coluna-assunto,
+.coluna-music{
+  display: flex;
+  justify-content:flex-start;
+  margin-left: 5px;
+  padding: 5px;
+}
+.coluna-topico, 
+.coluna-assunto,
+.coluna-music, 
+i{
+  display: flex;
+  padding-right: 10px;
+}
+.coluna-topico h1{
+  font-size: 16px;
+}
+.coluna-assunto h1{
+  font-size: 16px;
+}
+.coluna-music h1{
+  font-size: 16px;
+}
+
+.perfil-info{
+  display: flex;
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.perfil-info span{
+  font-size: 12px;
+}
+.perfil-container img{
+  border-radius: 70px;
+}
+.perfil-incones{
+  display:flex;
+  justify-content: right;
   
-  .perfil-info{
-    display: flex;
-    margin-left: 5px;
-    display: flex;
-    flex-direction: column;
-  }
-  .perfil-info span{
-    font-size: 12px;
-  }
-  .perfil-container img{
-    border-radius: 70px;
-  }
-  .perfil-incones{
-    display:flex;
-    justify-content: right;
-    
-  }
+}
 
 #nome{
     color: white;

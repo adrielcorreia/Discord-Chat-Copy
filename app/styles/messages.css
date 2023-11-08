@@ -7,8 +7,16 @@
 }
 
 .username {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
     color: #F2F3F5;
     align-self: start;
+}
+
+.data {
+    color: #7C828B;
+    font-size: .8rem;
 }
 
 .msg-individual {

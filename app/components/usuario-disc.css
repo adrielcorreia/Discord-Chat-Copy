@@ -1,7 +1,6 @@
 .user-container{
     display: inline-block;
     color: #208570;
-    float: right;
     width: 100%;
     padding: 1rem;
     height: calc(100vh - 100px);
@@ -10,10 +9,14 @@
 .user-content{
     display: flex;
     flex-direction: row;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding: 10px;
     cursor: pointer;
-} 
+    border-radius: 5px;
+}
+
+.user-content:hover {
+    background-color: #35373C;
+}
 
 .user-icon{
     width: 40px;

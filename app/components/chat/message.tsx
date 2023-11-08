@@ -1,12 +1,14 @@
 import '../../styles/messages.css'
 
 import Image from 'next/image'
+import { useRef, useState } from 'react'
 
 const styles:object = {
     width: '100%',
     height: '100%',
     display: 'flex',
-    flexDirection: 'column-reverse'
+    flexDirection: 'column-reverse',
+    gap: '1rem'
 }
 
 const msgStyle:object = {
@@ -31,21 +33,29 @@ interface Mensagem {
     message: string
 }
 
+export const mensagens = [
+    <Message profile='/paul.png' userName='lokevir' message='ola mundo'></Message>,
+    <Message profile='/paul.png' userName='lokevir' message='ola mundo'></Message>,
+]
+
 export function Message(props: Mensagem) {
-    const data_atual = new Date()
+    const data = new Date()
+    const data_atual = data.toLocaleDateString('pt-br')
+
     return (
         <div className='msg' style={msgStyle}>
             <Image alt='' src={props.profile} style={imgStyle} width={40} height={40} quality={100}/>
-            <span className='username'>{props.userName}</span>
+            <span className='username'>{props.userName} <p className='data'>{data_atual}</p></span>
             <span className='msg-individual'>{props.message}</span>
         </div>
     )
 }
 
 export default function Messages() {
+
     return (
         <div className="chat" style={styles}>
-            <Message profile='/paul.png' userName='lokevir' message='ola mundo'></Message>
+            {mensagens}
         </div>
     )
 }
