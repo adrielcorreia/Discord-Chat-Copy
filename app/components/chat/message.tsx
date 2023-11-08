@@ -1,7 +1,9 @@
-import '../../styles/messages.css'
+'use client'
 
+import '../../styles/messages.css'
 import Image from 'next/image'
 import { useRef, useState } from 'react'
+import { isArrayBufferView } from 'util/types'
 
 const styles:object = {
     width: '100%',
@@ -35,12 +37,12 @@ interface Mensagem {
 
 export const mensagens = [
     <Message profile='/paul.png' userName='lokevir' message='ola mundo'></Message>,
-    <Message profile='/paul.png' userName='lokevir' message='ola mundo'></Message>,
+    <Message profile='/paul.png' userName='adriel' message='saudação de Paulo'></Message>
 ]
 
 export function Message(props: Mensagem) {
     const data = new Date()
-    const data_atual = data.toLocaleDateString('pt-br')
+    const data_atual = data.toTimeString()
 
     return (
         <div className='msg' style={msgStyle}>
@@ -51,11 +53,10 @@ export function Message(props: Mensagem) {
     )
 }
 
-export default function Messages() {
-
+export default function Messages(props:{arr?:any[]}) {
     return (
         <div className="chat" style={styles}>
-            {mensagens}
+            {props.arr}
         </div>
     )
 }
