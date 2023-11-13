@@ -1,4 +1,4 @@
-import "./usuario-disc.css"
+import "../../styles/users-styles/usuario-disc.css"
 
 interface UsuarioProps {
     username: string;

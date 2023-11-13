@@ -57,6 +57,11 @@ main {
     flex-direction: column;
 }
 
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
 .justify-center {
     justify-content: center;
 }

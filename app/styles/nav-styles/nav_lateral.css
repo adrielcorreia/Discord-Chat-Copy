@@ -40,13 +40,7 @@
     transition: height 0.3s; /* Adicionamos uma transição para a propriedade border-radius */
 }
 
-.circleIconButton {
-    color: #23A559;
-}
-
 .circleIconButton, .fa-circle-user, .fa-discord {
-    display: inline-block;
-    padding: 22px 0 0 7.5px;
     width: 45px;
     height: 45px;
     background-color: #41434A;
@@ -56,14 +50,7 @@
 }
 
 .circleIconButton {
-    display: inline-block;
-    padding: 8px 0 0 10.6px;
-    width: 45px;
-    height: 45px;
-    background-color: #41434A;
-    border-radius: 50%; /* Inicialmente, o elemento é um círculo */
-    text-decoration: none;
-    transition: border-radius 0.5s; /* Adicionamos uma transição para a propriedade border-radius */
+    color: #23A559;
 }
 
 .nav-link:hover .fa-discord {

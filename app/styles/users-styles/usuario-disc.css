@@ -8,7 +8,6 @@
 
 .user-content{
     display: flex;
-    flex-direction: row;
     padding: 10px;
     cursor: pointer;
     border-radius: 5px;

@@ -51,26 +51,20 @@ form, input {
     background-color: var(--btn-hover);
 }
 
-.btn:hover :where(.fa-note-sticky, .fi, .fa-gift, .fa-face-smile){
+.btn:hover :where(.fa-circle-plus, .fa-note-sticky, .fi, .fa-gift, .fa-face-smile){
     color: var(--btn-hover);
 }
 
 .upload {
-    padding: .5rem 1.1rem;
+    padding: .4rem 1.1rem;
     padding-left: 0;
 }
 
-.fa-plus {
-    padding-top: .25rem;
-    padding-right: .04rem;
+.fa-circle-plus {
     font-weight: 900;
-    background-color: var(--btn-background);
-    width: 20px;
-    height: 20px;
+    color: var(--btn-background);
     text-align: center;
-    font-size: .9rem;
-    border-radius: 100%;
-    aspect-ratio: 1;
+    font-size: 1.25rem;
 }
 
 .right-btns {

@@ -1,4 +1,4 @@
-import "../styles/coluna.css";
+import "../../styles/coluna-styles/coluna.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 interface ColunaProps {

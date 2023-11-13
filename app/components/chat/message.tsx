@@ -1,17 +1,7 @@
 'use client'
 
-import '../../styles/messages.css'
+import '../../styles/chat-styles/messages.css'
 import Image from 'next/image'
-import { useRef, useState } from 'react'
-import { isArrayBufferView } from 'util/types'
-
-const styles:object = {
-    width: '100%',
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column-reverse',
-    gap: '1rem'
-}
 
 const msgStyle:object = {
     display: 'grid',
@@ -35,28 +25,20 @@ interface Mensagem {
     message: string
 }
 
-export const mensagens = [
-    <Message profile='/paul.png' userName='lokevir' message='ola mundo'></Message>,
-    <Message profile='/paul.png' userName='adriel' message='saudação de Paulo'></Message>
-]
-
-export function Message(props: Mensagem) {
+export default function Message(props: Mensagem) {
     const data = new Date()
-    const data_atual = data.toTimeString()
+    const data_atual = data.toLocaleDateString()
 
     return (
         <div className='msg' style={msgStyle}>
             <Image alt='' src={props.profile} style={imgStyle} width={40} height={40} quality={100}/>
-            <span className='username'>{props.userName} <p className='data'>{data_atual}</p></span>
-            <span className='msg-individual'>{props.message}</span>
-        </div>
-    )
-}
 
-export default function Messages(props:{arr?:any[]}) {
-    return (
-        <div className="chat" style={styles}>
-            {props.arr}
+            <span className='username'>
+                {props.userName} 
+                <p className='data'>{data_atual}</p>
+            </span>
+
+            <span className='msg-individual'>{props.message}</span>
         </div>
     )
 }
