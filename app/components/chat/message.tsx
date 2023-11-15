@@ -2,12 +2,13 @@
 
 import '../../styles/chat-styles/messages.css'
 import Image from 'next/image'
+import { useRef } from 'react'
 
 const msgStyle:object = {
     display: 'grid',
-    gridTemplateRows: '1fr 1fr',
+    gridTemplateRows: '.8fr 1fr',
     gridTemplateColumns: '40px 1fr',
-    padding: '.2rem 1rem',
+    padding: '0 1rem',
     columnGap: '1rem'
 }
 
@@ -27,7 +28,7 @@ interface Mensagem {
 
 export default function Message(props: Mensagem) {
     const data = new Date()
-    const data_atual = data.toLocaleDateString()
+    const data_atual = useRef(data.toLocaleString('pt-br'))
 
     return (
         <div className='msg' style={msgStyle}>
@@ -35,7 +36,7 @@ export default function Message(props: Mensagem) {
 
             <span className='username'>
                 {props.userName} 
-                <p className='data'>{data_atual}</p>
+                <p className='data'>{data_atual.current}</p>
             </span>
 
             <span className='msg-individual'>{props.message}</span>

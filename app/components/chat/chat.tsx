@@ -6,11 +6,11 @@ import RightButtons from './buttons'
 import { useState } from 'react'
 import { useReducer } from 'react'
 import { Upload } from './buttons'
-//import Messages from './chat/message'
 
 const styles:object = {
     display: 'flex',
-    flexDirection: 'column-reverse',
+    justifyContent: 'end',
+    flexDirection: 'column',
     gap: '1rem'
 }
 
@@ -18,9 +18,8 @@ function reducer(state:any, action:any):any {
     switch (action.type) {
         case 'add-msg': {
             return {
-                message: [
-                    ... state.message,
-                    { message: action.msg }
+                messages: [
+                    ... state.messages, action.msg 
                 ]
             }
         }
@@ -30,15 +29,15 @@ function reducer(state:any, action:any):any {
 }
 
 export default function Chat() {
-    const [state, dispatch] = useReducer(reducer, { message: [] })
+    const [state, dispatch] = useReducer(reducer, { messages: [] })
     const [msg, setMsg] = useState('')
 
     return (
         <div className="chat-div">
             <div className="chat" style={styles}>
-                {alert(state.message)!}
-
-                <Message profile='/paul.png' userName='adriel' message='saudação de Paulo'></Message>
+                {state.messages.map((element:any) => (
+                    <Message profile='/paul.png' userName='adriel' message={element}></Message>
+                ))}
             </div>
             
             <div className="chat-submit-container block">
@@ -46,8 +45,11 @@ export default function Chat() {
                     <Upload />
 
                     <form onSubmit={(event) => {
-                        dispatch({type: 'add-msg', msg})
                         event.preventDefault()
+
+                        if (msg == '') return
+                        dispatch({type: 'add-msg', msg}),
+                        setMsg('')
                     }}>
                         <input
                             value={msg}

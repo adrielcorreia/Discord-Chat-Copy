@@ -59,7 +59,7 @@ interface ColunaProps {
             <div className="perfil-container">
                 <img
                  src={"https://www.w3schools.com/howto/img_avatar.png"}
-                 width="100%"
+                 width="80%"
                  border-radius="60px"
                 />
                 <div className="perfil-info">

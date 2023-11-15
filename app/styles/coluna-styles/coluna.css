@@ -24,7 +24,6 @@
 .coluna-body{
   display:block;
   padding: 10px;
-  background-color: #2f3136;
 }
 
 .coluna-titulo {
@@ -35,24 +34,29 @@
   justify-content: space-between;
   background-color: #2f3136;
 }
+
 .coluna-titulo h1{
   font-size: 20px;
 }
+
 .coluna-perfil{
   display: flex;
   padding: 5px 10px;
   justify-content: space-between;
+  background: #232428;
 }
+
 .coluna-perfil i{
   padding: 4px;
   display:inline-flex;
   justify-content: space-around;
 }
+
 .perfil-container {
   width: 40px;
   display: flex;
-  
 }
+
 .coluna-topico, .coluna-assunto, .coluna-music {
   display: flex;
   justify-content:flex-start;
@@ -76,7 +80,7 @@
 }
 
 .perfil-container img{
-  border-radius: 70px;
+  border-radius: 100%;
   object-fit: contain;
 }
 
