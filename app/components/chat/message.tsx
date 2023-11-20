@@ -8,7 +8,7 @@ const msgStyle:object = {
     display: 'grid',
     gridTemplateRows: '.8fr 1fr',
     gridTemplateColumns: '40px 1fr',
-    padding: '0 1rem',
+    padding: '.5rem 1rem',
     columnGap: '1rem'
 }
 
@@ -39,7 +39,7 @@ export default function Message(props: Mensagem) {
                 <p className='data'>{data_atual.current}</p>
             </span>
 
-            <span className='msg-individual'>{props.message}</span>
+            <span className='msg-individual flex column'>{[props.message]}</span>
         </div>
     )
 }

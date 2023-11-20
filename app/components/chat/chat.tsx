@@ -1,17 +1,16 @@
 'use client'
 
 import '../../styles/chat-styles/chat.css'
+import { useState, useReducer } from 'react'
+import { Upload } from './buttons'
 import Message from './message'
 import RightButtons from './buttons'
-import { useState } from 'react'
-import { useReducer } from 'react'
-import { Upload } from './buttons'
 
 const styles:object = {
     display: 'flex',
     justifyContent: 'end',
     flexDirection: 'column',
-    gap: '1rem'
+    gap: '.5rem'
 }
 
 function reducer(state:any, action:any):any {
@@ -19,25 +18,28 @@ function reducer(state:any, action:any):any {
         case 'add-msg': {
             return {
                 messages: [
-                    ... state.messages, action.msg 
+                    ... state.messages, [action.msg]
                 ]
             }
         }
+
         default: 
             return state;
     }
 }
-
 export default function Chat() {
     const [state, dispatch] = useReducer(reducer, { messages: [] })
     const [msg, setMsg] = useState('')
+    const [arr, setArr] = useState([])
 
     return (
         <div className="chat-div">
             <div className="chat" style={styles}>
-                {state.messages.map((element:any) => (
+
+                {state.messages.map((element:string) => (
                     <Message profile='/paul.png' userName='adriel' message={element}></Message>
                 ))}
+                
             </div>
             
             <div className="chat-submit-container block">
@@ -47,9 +49,11 @@ export default function Chat() {
                     <form onSubmit={(event) => {
                         event.preventDefault()
 
-                        if (msg == '') return
-                        dispatch({type: 'add-msg', msg}),
-                        setMsg('')
+                        if (msg != '') {
+                            dispatch({type: 'add-msg', msg}),
+                            setMsg('')
+                        }
+                        
                     }}>
                         <input
                             value={msg}
