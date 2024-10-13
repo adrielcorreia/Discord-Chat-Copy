@@ -36,8 +36,8 @@ export default function Chat() {
         <div className="chat-div">
             <div className="chat" style={styles}>
 
-                {state.messages.map((element:string) => (
-                    <Message profile='/paul.png' userName='adriel' message={element}></Message>
+                {state.messages.map((element:string, key: number) => (
+                    <Message key={key} profile='/paul.png' userName='adriel' message={element}></Message>
                 ))}
                 
             </div>
