@@ -2,7 +2,7 @@
 
 import '../../styles/chat-styles/chat.css'
 import { useState, useReducer } from 'react'
-import { Upload } from './buttons'
+import { UploadButton } from './buttons'
 import Message from './message'
 import RightButtons from './buttons'
 
@@ -37,14 +37,14 @@ export default function Chat() {
             <div className="chat" style={styles}>
 
                 {state.messages.map((element:string, key: number) => (
-                    <Message key={key} profile='/paul.png' userName='adriel' message={element}></Message>
+                    <Message key={key} profile='/paul.png' userName='usuário' message={element}></Message>
                 ))}
                 
             </div>
             
             <div className="chat-submit-container block">
                 <div className='chat-text-area flex align-center'>
-                    <Upload />
+                    <UploadButton />
 
                     <form onSubmit={(event) => {
                         event.preventDefault()

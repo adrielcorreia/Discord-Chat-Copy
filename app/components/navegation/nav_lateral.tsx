@@ -1,29 +1,40 @@
+'use client'
+
 import Image from 'next/image'
 import '../../styles/nav-styles/nav_lateral.css'
 
-export default function Nav_lateral() {
+const icons_arr = [
+    {
+        type: 'brands', 
+        icon: 'discord'
+    },
+    {
+        type: 'solid', 
+        icon: 'circle-user'
+    },
+    {
+        type: 'solid', 
+        icon: 'circle-user'
+    }
+]
+
+export default function Nav_LateralEsquerda() {
   return (
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark d-inline-block">
             <ul className="navbar-nav flex-column px-2 nvv">
-                <li className="nav-item">
-                <a href="" className="nav-link">
-                    <h2 className="fa-brands fa-discord flex center"></h2>
-                    <div className="point"></div>
-                </a>
-                </li>
+                {
+                    icons_arr.map((icon: any, key: number) => (
+                        <li className="nav-item">
+                            <a href="" onClick={(e) => e.preventDefault()} className="nav-link ">
+                                <h2 className={`fa-${icon.type}`}>
+                                    <div className={`flex center fa-${icon.icon}`}></div>
+                                </h2>
+                                <div className="point"></div>
+                            </a>
+                        </li>
+                    ))
+                }
 
-                <li className="nav-item">
-                <a href="" className="nav-link">
-                    <h2 className="fa-solid fa-circle-user flex center"></h2>
-                    <div className="point"></div>
-                </a>
-                </li>
-                <li className="nav-item">
-                <a href="" className="nav-link">
-                    <h2 className="fa-solid fa-circle-user flex center"></h2>
-                    <div className="point"></div>
-                </a>
-                </li>
                 <li className="nav-item">
                     <a href="" className="nav-link">
                         <div className="circleIconButton flex center" aria-label="Adicionar um servidor" role="treeitem" data-list-item-id="guildsnav___create-join-button"><svg className="circleIcon__428dd" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M20 11.1111H12.8889V4H11.1111V11.1111H4V12.8889H11.1111V20H12.8889V12.8889H20V11.1111Z"></path></svg></div>

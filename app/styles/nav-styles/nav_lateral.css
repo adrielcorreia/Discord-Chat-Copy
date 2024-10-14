@@ -53,12 +53,6 @@
     color: #23A559;
 }
 
-.nav-link:hover .fa-discord {
-    border-radius: 12px;
-    background-color: #5865F2; /* Quando o cursor passa por cima, alteramos o border-radius para 0, tornando o elemento um quadrado */
-    color: white;
-}
-
 .nav-link:hover .point {
     border-radius: 12px;
     height: 20px;

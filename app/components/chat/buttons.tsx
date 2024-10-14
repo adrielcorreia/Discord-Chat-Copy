@@ -9,7 +9,7 @@ export default function RightButtons() {
     )
 }
 
-export function Upload() {
+export function UploadButton() {
     return (
         <button className='btn upload'>
             <h3 className='fa-solid fa-circle-plus'></h3>

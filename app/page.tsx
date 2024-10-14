@@ -3,14 +3,14 @@ import Chat from './components/chat/chat'
 import styles from './styles/global/page.module.css'
 import { Coluna } from './components/coluna/coluna'
 import { Usuario } from "./components/users/usuario-disc";
-import Nav_lateral from './components/navegation/nav_lateral'
+import Nav_lateralEsquerda from './components/navegation/nav_lateral'
 import Nav_central from './components/navegation/nav_central'
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <aside className='darkgray servers'>
-        <Nav_lateral />
+        <Nav_lateralEsquerda />
       </aside>
 
       <aside className='gray canais'>
