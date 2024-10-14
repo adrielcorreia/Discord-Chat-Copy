@@ -21,11 +21,14 @@ const icons_arr = [
 export default function Nav_LateralEsquerda() {
   return (
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark d-inline-block">
-            <ul className="navbar-nav flex-column px-2 nvv">
+            <ul className="navbar-nav flex-column nvv">
                 {
                     icons_arr.map((icon: any, key: number) => (
-                        <li className="nav-item">
-                            <a href="" onClick={(e) => e.preventDefault()} className="nav-link ">
+                        <li key={key} className="nav-item">
+                            <a href="" 
+                                onClick={(e) => e.preventDefault()} 
+                                className="nav-link "
+                            >
                                 <h2 className={`fa-${icon.type}`}>
                                     <div className={`flex center fa-${icon.icon}`}></div>
                                 </h2>
