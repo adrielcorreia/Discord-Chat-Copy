@@ -1,5 +1,5 @@
 import Image from "next/image";
-import imgAvatar from "./img_avatar.png"
+import imgAvatar from "@/public/img_avatar.png"
 import "../../styles/coluna-styles/coluna.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 

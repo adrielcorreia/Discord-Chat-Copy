@@ -15,7 +15,7 @@ export default function Home() {
 
       <aside className='gray canais'>
         <Coluna
-          nome="Lucas"
+          nome="usuário"
           titulo= "Softex"
           topico= "Sala"
           assunto= "turma"
