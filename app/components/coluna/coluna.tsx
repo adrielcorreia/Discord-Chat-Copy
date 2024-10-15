@@ -1,3 +1,5 @@
+import Image from "next/image";
+import imgAvatar from "./img_avatar.png"
 import "../../styles/coluna-styles/coluna.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
@@ -57,10 +59,12 @@ interface ColunaProps {
           <div className="coluna-perfil">
   
             <div className="perfil-container">
-                <img
-                 src={"https://www.w3schools.com/howto/img_avatar.png"}
-                 width="80%"
-                 border-radius="60px"
+                <Image
+                    alt="img_avatar"
+                    src={imgAvatar}
+                    width={80}
+                    height={80}
+                    border-radius="60px"
                 />
                 <div className="perfil-info">
                     <span id="nome">{props.nome}</span>
@@ -71,9 +75,9 @@ interface ColunaProps {
             
   
             <div className="perfil-icones">
-                <i className="bi bi-mic-fill"></i>
-                <i className="bi bi-headphones"></i>
-                <i className="bi bi-gear-fill"></i>
+                <i aria-hidden className="bi bi-mic-fill"></i>
+                <i aria-hidden className="bi bi-headphones"></i>
+                <i aria-hidden className="bi bi-gear-fill"></i>
             </div>
   
           </div>  
