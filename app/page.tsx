@@ -9,7 +9,7 @@ import Nav_central from './components/navegation/nav_central'
 export default function Home() {
   return (
     <main className={styles.main}>
-      <aside className='darkgray servers'>
+      <aside className='darkgray row-start-1 row-end-3 pt-2'>
         <Nav_lateralEsquerda />
       </aside>
 

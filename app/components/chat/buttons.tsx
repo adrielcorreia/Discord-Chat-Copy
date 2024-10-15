@@ -1,6 +1,6 @@
 export default function RightButtons() {
     return (
-        <div className='right-btns'>
+        <div className='flex gap-2'>
             <button aria-hidden className='btn gift'><h2 className='fa-solid fa-gift'></h2></button>
             <button aria-hidden className='btn gif'><i className="fi fi-sr-gif-square"></i></button>
             <button aria-hidden className='btn sticker'><h1 className="fa-solid fa-note-sticky"></h1></button>

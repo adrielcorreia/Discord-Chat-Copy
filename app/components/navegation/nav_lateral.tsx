@@ -3,35 +3,35 @@
 import Image from 'next/image'
 import '../../styles/nav-styles/nav_lateral.css'
 
-const icons_arr = [
-    {
-        type: 'brands', 
-        icon: 'discord'
-    },
-    {
-        type: 'solid', 
-        icon: 'circle-user'
-    },
-    {
-        type: 'solid', 
-        icon: 'circle-user'
-    }
-]
+const images_arr = ['/beach.jpg', '/brasil_imperial.png']
 
 export default function Nav_LateralEsquerda() {
   return (
-        <nav className="navbar navbar-expand-sm navbar-dark bg-dark d-inline-block">
-            <ul className="navbar-nav auto-rows-max nvv">
+        <nav className="h-full">
+            <a href="" 
+                onClick={(e) => e.preventDefault()} 
+                className="nav-link"
+            >
+                <div className='fa-brands'>
+                    <h2 aria-hidden className='text-2xl flex center fa-discord'></h2>
+                </div>
+                <div className="point"></div>
+            </a>
+            <ul className="navbar-nav h-full grid auto-rows-min gap-5">
                 {
-                    icons_arr.map((icon: any, key: number) => (
+                    images_arr.map((image: any, key: number) => (
                         <li key={key} className="nav-item">
                             <a href="" 
                                 onClick={(e) => e.preventDefault()} 
                                 className="nav-link"
                             >
-                                <div className={`fa-${icon.type}`}>
-                                    <h2 aria-hidden className={`text-2xl flex center fa-${icon.icon}`}></h2>
-                                </div>
+                                <Image
+                                    className='rounded-full'
+                                    width={500} 
+                                    height={500}
+                                    alt=''
+                                    src={image}
+                                />
                                 <div className="point"></div>
                             </a>
                         </li>
@@ -39,16 +39,12 @@ export default function Nav_LateralEsquerda() {
                 }
 
                 <li className="nav-item">
-                    <a href="" className="nav-link">
-                        <div aria-hidden className="circleIconButton flex center" aria-label="Adicionar um servidor" role="treeitem" data-list-item-id="guildsnav___create-join-button"><svg className="circleIcon__428dd" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M20 11.1111H12.8889V4H11.1111V11.1111H4V12.8889H11.1111V20H12.8889V12.8889H20V11.1111Z"></path></svg></div>
-                        <div className="point"></div>
-                    </a>
+                    <a href='' aria-hidden className="nav-link circleIconButton flex center" aria-label="Adicionar um servidor" role="treeitem" data-list-item-id="guildsnav___create-join-button"><svg className="circleIcon__428dd" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M20 11.1111H12.8889V4H11.1111V11.1111H4V12.8889H11.1111V20H12.8889V12.8889H20V11.1111Z"></path></svg></a>
+                    <div className="point"></div>
                 </li>
-                <li className="nav-item">
-                    <a href="" className="nav-link">
-                        <div aria-hidden className="self-end justify-self-end circleIconButton flex center" aria-label="Explorar servidores do Descobrir" role="treeitem" data-list-item-id="guildsnav___guild-discover-button"><svg aria-hidden="true" role="img" className="circleIcon__428dd" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 10.9C11.39 10.9 10.9 11.39 10.9 12C10.9 12.61 11.39 13.1 12 13.1C12.61 13.1 13.1 12.61 13.1 12C13.1 11.39 12.61 10.9 12 10.9ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.19 14.19L6 18L9.81 9.81L18 6L14.19 14.19Z"></path></svg></div>
-                        <div className="point"></div>
-                    </a>
+                <li className="nav-item self-end">
+                    <a href='' aria-hidden className="nav-link  circleIconButton flex center" aria-label="Explorar servidores do Descobrir" role="treeitem" data-list-item-id="guildsnav___guild-discover-button"><svg aria-hidden="true" role="img" className="circleIcon__428dd" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 10.9C11.39 10.9 10.9 11.39 10.9 12C10.9 12.61 11.39 13.1 12 13.1C12.61 13.1 13.1 12.61 13.1 12C13.1 11.39 12.61 10.9 12 10.9ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.19 14.19L6 18L9.81 9.81L18 6L14.19 14.19Z"></path></svg></a>
+                    <div className="point"></div>
                 </li>
             </ul>
         </nav>
